@@ -35,7 +35,7 @@ if [ $STOPPED -eq 0 ]; then
     echo "No PID files found. Searching for processes..."
 
     # Find and kill Flask server
-    FLASK_PIDS=$(pgrep -f "python.*server.py")
+    FLASK_PIDS=$(pgrep -f "python.*src/server.py")
     if [ -n "$FLASK_PIDS" ]; then
         echo "Stopping Flask server processes: $FLASK_PIDS"
         kill $FLASK_PIDS 2>/dev/null

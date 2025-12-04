@@ -42,7 +42,7 @@ fi
 
 # Start Flask server in background
 echo "Starting Flask server on port 5000..."
-python server.py > log/flask.log 2>&1 &
+python src/server.py > log/flask.log 2>&1 &
 FLASK_PID=$!
 echo "Flask server started (PID: $FLASK_PID)"
 

@@ -70,11 +70,11 @@ To stop all services:
 
 #### Running Locally
 
-1. Make sure you have an image at `images/rickroll.jpg` (or update the path in `server.py`)
+1. Make sure you have an image at `images/rickroll.jpg` (or update the path in `src/server.py`)
 
 2. Start the Flask server:
 ```bash
-python server.py
+python src/server.py
 ```
 
 3. Access locally at:
@@ -84,7 +84,7 @@ python server.py
 
 1. Start the Flask server (if not already running):
 ```bash
-python server.py
+python src/server.py
 ```
 
 2. In a new terminal, start ngrok:
@@ -139,7 +139,7 @@ To keep both services running:
 
 ```bash
 # Start Flask server in background
-python server.py &
+python src/server.py &
 
 # Start ngrok in background
 ngrok http 5000 &
@@ -148,7 +148,7 @@ ngrok http 5000 &
 To stop:
 ```bash
 # Find process IDs
-ps aux | grep "python server.py"
+ps aux | grep "python src/server.py"
 ps aux | grep ngrok
 
 # Kill processes
@@ -166,7 +166,8 @@ kill <PID>
 
 ```
 .
-├── server.py              # Main Flask application
+├── src/
+│   └── server.py          # Main Flask application
 ├── launch.sh              # Script to start Flask + ngrok
 ├── stop.sh                # Script to stop all services
 ├── images/
